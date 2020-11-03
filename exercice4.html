@@ -12,43 +12,43 @@
     <body>
         <h1>Exercice 4</h1>
         <div class="container">
-        <form method="post" action="exercice4.html" name="monformulaire" onSubmit="return Verification()">
-            <label for="lastname">Nom</label>
+        <form method="post" action="exercice4.html" name="monformulaire">
+            <label for="lastName">Nom</label>
             <input type="text" name="lastName" id="lastName" aria-placeholder="Entrez votre nom" placeholder="Nom" class="form-control">
             
             
             <label for="firstName">Prénom</label>
-            <input type="text" name="prenom" id="FirstName" placeholder="Prénom" aria-placeholder="Entrez votre prénom" class="form-control">
+            <input type="text" name="firstName" id="firstName" placeholder="Prénom" aria-placeholder="Entrez votre prénom" class="form-control">
            
             
-            <label for="idVille">Ville</label>
-            <input type="text" placeholder="Ville" name="ville" id="Ville" aria-placeholder="Entrez la ville où vous habitez" class="form-control">
+            <label for="city">Ville</label>
+            <input type="text"  name="city" id="city" aria-placeholder="Entrez la ville où vous habitez" placeholder="Ville" class="form-control">
 
-            <input type="submit" name="valider" value="Envoyer">
-           
+            <button class="btn btn-primary mt-2" onclick="sendData()" >
+                <!-- on pourrait mettre un label for="submit" pour envoyer données, mais on ne veut pas envoyer 
+                    les données, on va donc mettre un boutton-->
+                Envoyer le formulaire
+            </button>
+ 
         </form>
-        </div>
+    </div>
 
     <script>
-        var Nom = document.getElementById('Nom');
-        var Prenom = document.getElementById('Prenom');
-        var Ville = document.getElementById('Ville');
-        alert('Nom' + 'Prenom' + 'Ville')
-        function OpenWindows () {
-            alert ("")
+        function sendData() {
+        var lastName= document.getElementById('lastName').value;
+        var firstName= document.getElementById('firstName').value;
+        var city= document.getElementById('city').value;
+        alert ('Nom : '+lastName+'\n'+'Prénom : '+firstName+'\n'+'Ville : '+city);  
         }
+
     </script>
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!-- // getElementById = va chercher l'élément dont l'id s'apelle lastName
+        // on récupère tout ce qui est associé à l'élément, pour cibler ce que l'on veut dans le champ, ici la valeur : on va mettre .value
+        // ainsi il va récupérer la value de lastName -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
-
-<!-- <script>
-    var lastName = "Doe";
-    var firstName = "John"; 
-    var city = "New York";
-    alert('Nom : '+ lastName + '\n' + 'Prénom :' + firstName + '\n' + 'Ville :' +city);
-    </script> -->
 
     </body>
 </html>
