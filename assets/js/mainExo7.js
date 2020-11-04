@@ -7,3 +7,4 @@ function yourAge() {
         alert('Vous êtes mineur');
     }
 }
+// on peut mettre plusieurs if à la suite
