@@ -12,10 +12,12 @@
     <body>
         <h1>Exercice 4</h1>
         <div class="container">
-        <form method="post" action="exercice4.html" name="monformulaire">
+        <form method="POST" action="exercice4.html" name="monformulaire">
+            <!-- action -->
             <label for="lastName">Nom</label>
+            <!-- label : c'est une balise qui permet de rentrer du texte, c'est le texte qui va être écrit avant le champ de saisie-->
             <input type="text" name="lastName" id="lastName" aria-placeholder="Entrez votre nom" placeholder="Nom" class="form-control">
-            
+            <!-- input permet d'avoir le champ de saisie -->
             
             <label for="firstName">Prénom</label>
             <input type="text" name="firstName" id="firstName" placeholder="Prénom" aria-placeholder="Entrez votre prénom" class="form-control">
@@ -26,7 +28,8 @@
 
             <button class="btn btn-primary mt-2" onclick="sendData()" >
                 <!-- on pourrait mettre un label for="submit" pour envoyer données, mais on ne veut pas envoyer 
-                    les données, on va donc mettre un boutton-->
+                    les données, on va donc mettre un bouton
+                onclick : lorsque l'on clic sur le bouton ça va effectuer la fonction du script, ici sendData-->
                 Envoyer le formulaire
             </button>
  

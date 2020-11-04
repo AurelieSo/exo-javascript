@@ -1,7 +1,11 @@
-
-
-function sendData() {
+function divideThem() {
     var firstNumber= document.getElementById('firstNumber').value;
     var secondNumber= document.getElementById('secondNumber').value;
-    alert ('le reste est : '+ firstNumber % secondNumber);
+    var result= (firstNumber % secondNumber);
+    return (result) ;
+    }
+
+    function displayAlert(){
+        var myResult= divideThem();
+        alert(myResult);
     }
