@@ -4,7 +4,7 @@ function enlargePicture(){
 }
 
 // on récupère la largeur de l'image ligne2
-// on va changer les styles .styles
+// on va changer les styles .style
 // on va modifier la largeur .width
 // (imageWidth + 20) opération
 // + "px" l'opération sera en px
